@@ -1,0 +1,36 @@
+{
+  "name": "number-transition",
+  "version": "0.1.0",
+  "author": "Simon Lydell",
+  "license": "MIT",
+  "description": "Transition from one number to another during a given duration.",
+  "main": "index.js",
+  "repository": "lydell/number-transition",
+  "keywords": [
+    "transition",
+    "animate",
+    "animation",
+    "number",
+    "ease",
+    "timing"
+  ],
+  "scripts": {
+    "test": "node test/index"
+  },
+  "devDependencies": {
+    "tape": "^3.4.0"
+  },
+  "testling": {
+    "files": "test/index.js",
+    "browsers": [
+      "ie/8..latest",
+      "chrome/latest",
+      "firefox/latest",
+      "opera/12",
+      "opera/latest",
+      "safari/5",
+      "iphone/6",
+      "android-browser/4"
+    ]
+  }
+}
