@@ -1,4 +1,4 @@
-Overview [![Build Status](https://travis-ci.org/lydell/number-transititon.svg?branch=master)](https://travis-ci.org/lydell/number-transititon)
+Overview [![Build Status](https://travis-ci.org/lydell/number-transition.svg?branch=master)](https://travis-ci.org/lydell/number-transition)
 ========
 
 [![browser support](https://ci.testling.com/lydell/number-transition.png)](https://ci.testling.com/lydell/number-transition)
@@ -29,13 +29,13 @@ with better browser support and no dependencies.
 Installation
 ============
 
-`npm install number-transititon`
+`npm install number-transition`
 
 ```js
-var transition = require("number-transititon")
+var transition = require("number-transition")
 
 // Possibly:
-var transition = require("number-transititon").bind(null, requestAnimationFrame)
+var transition = require("number-transition").bind(null, requestAnimationFrame)
 ```
 
 Usage
@@ -44,11 +44,10 @@ Usage
 `var abort = transition(tick, options, [callback])`
 ---------------------------------------------------
 
-`transition` transitions from `options.from` to `options.to` in
-`options.duration` milliseconds by calling `options.step(value)` each `tick`,
-where `value` is the current transitional value. By default the transition is
-linear, but that can be changed by passing a different timing function as
-`options.timing`.
+Transition from `options.from` to `options.to` in `options.duration`
+milliseconds by calling `options.step(value)` each `tick`, where `value` is the
+current transitional value. By default the transition is linear, but that can be
+changed by passing a different timing function as `options.timing`.
 
 `tick(fn)` is an asyncronous function that calls `fn`. `requestAnimationFrame`
 is a good choice. `tick` is the first argument (and not an option), so that you
