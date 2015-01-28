@@ -108,6 +108,9 @@ test("abort", function(t) {
     values.assert(t, function(a) { return a < 4 })
   })
   setTimeout(abort, 10)
+  // Calling `abort` several times should not result in calling `callback` more
+  // than once. (`t.plan` would fail then.)
+  setTimeout(abort, 11)
 })
 
 

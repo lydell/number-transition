@@ -71,6 +71,9 @@ Calling the returned `abort` function aborts the transition and calls
 `callback(true)`. (In other words, the argument passed to `callback` indicates
 whether the transition was aborted or not.)
 
+You may safely call `abort` more than once. `callback(true)` will only be called
+once though.
+
 
 License
 =======
